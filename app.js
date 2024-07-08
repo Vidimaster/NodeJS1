@@ -18,12 +18,12 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, {
             'Content-Type': 'text/html; charset=UTF-8',
         });
-        res.end(`<h1> Добро пожаловать на мой сайт!</h1> <p>Количество посещений: </p> ${count_main()}`)
+        res.end(`<h1>Main</h1> <p>Количество посещений:  ${count_main()}</p> <br> <a href="/about">Go to About</a>`)
     } else if (req.url === '/about') {
         res.writeHead(200, {
             'Content-Type': 'text/html; charset=UTF-8',
         });
-        res.end(`<h1>About</h1> <p>Количество посещений: </p> ${count_about()}`)
+        res.end(`<h1>About</h1> <p>Количество посещений: ${count_about()}</p>  <br> <a href="/">Go to Main</a>`)
     } else {
         res.writeHead(404, {
             'Content-Type': 'text/html; charset=UTF-8',
